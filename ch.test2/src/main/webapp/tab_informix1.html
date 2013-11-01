@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Basic Layout - jQuery EasyUI Demo</title>
+		<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+		<link rel="stylesheet" type="text/css" href="easyui/demo.css">
+		<script type="text/javascript" src="easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+		<script>
+			function setDb(sel){
+				$(':input[name$="db"].para').val($('option:selected',sel).text());
+			}
+		</script>
+	</head>
+	<body>
+		<div class="easyui-tabs" data-options="border:false,fit:true">
+			<div title="SqlTest">
+				<div class="easyui-layout" data-options="fit:true">
+					<div data-options="region:'north',split:true" style="height:50px">
+						space.textarea.delete.<a href="http://www.jeasyui.com/documentation/layout.php" target="_blank">layout</a><br/>
+						<select id="selDb" onchange="setDb(this);"><option></option><option>vil</option><option>ci</option><option>app</option></select><input type="text" name="db" class="para" size="2" readonly/>
+						<input type="text" id="tab" value="batch_job_execution_params" size="40"/><input type="button" value="查詢" onclick="getColumns($('#tab').val())"/>
+						<select id="selTab" onclick="getTables(this)" onchange="getColumns($('option:selected',this).text())"></select>
+					</div>
+					
+					<div data-options="region:'west',split:true,title:'layMeta',iconCls:'icon-ok'" style="width:400px">
+						<div class="easyui-layout" data-options="fit:true">
+							<div id="tabMeta" data-options="region:'north',split:true" style="height:300px">
+								<div class="easyui-tabs" data-options="border:false,fit:true"></div>
+							</div>
+							<div id="tabJoin" data-options="region:'center'">
+								<div class="easyui-tabs" data-options="border:false,fit:true"></div>
+							</div>
+						</div>
+					</div>
+					
+					<div data-options="region:'center',title:'layData',iconCls:'icon-ok'">
+						<div class="easyui-tabs" data-options="border:false,fit:true">
+							<div id="tabData" title="data">
+								<div class="easyui-tabs" data-options="border:false,fit:true"></div>
+							</div>
+							<div title="diagram">
+								<div id="classDiagram" style="width:100%;height:100%"></div>
+							</div>
+							<div title="class">
+								<div class="easyui-layout" data-options="fit:true">
+									<div data-options="region:'west',split:true" style="width:400px"></div>
+									<div data-options="region:'center'"><textarea style='border:0;width:100%;height:100%;resize:none;white-space:nowrap'></textarea></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div data-options="region:'east',split:true,title:'tabScript',iconCls:'icon-ok'" style="width:400px">
+						<div class="easyui-accordion" data-options="fit:true">
+							<div title="sql" data-options="iconCls:'icon-search'"><textarea style='border:0;width:100%;height:100%;resize:none;white-space:nowrap'></textarea></div>
+							<div title="jSql" data-options="iconCls:'icon-cancel'"><textarea style='border:0;width:100%;height:100%;resize:none;white-space:nowrap'>1</textarea></div>
+							<div title="jSuccess" data-options="iconCls:'icon-ok'"><textarea style='border:0;width:100%;height:100%;resize:none;white-space:nowrap'></textarea></div>
+							<div title="jFail" data-options="iconCls:'icon-help'"><textarea style='border:0;width:100%;height:100%;resize:none;white-space:nowrap'></textarea></div>
+						</div>
+					</div>
+					
+					<div data-options="region:'south',split:true" style="height:50px"></div>
+				</div>
+			</div>
+			
+			<div title="ServiceTest">
+				<table border="1" style="border-collapse:collapse">
+					<tr>
+						<td>
+							<form>
+								<label>url</label><input type="text" name="url" class="para" value="vil"/><input type="text" name="rowStart" class="para" value="1" size="2"/><input type="text" name="rowEnd" class="para" value="4" size="2"/><br/>
+								<label>driverId</label><input type="text" name="driverId" class="para" value="S123360863"/><br/>
+								<label>birthday</label><input type="text" name="birthday" class="para" value=""/><br/>
+								<label>plateNo</label><input type="text" name="plateNo" class="para" value="ZK-8034"/><br/>
+								<label>carKind</label><input type="text" name="carKind" class="para" value=""/><br/>
+								<label>ticket</label><input type="text" name="ticket" class="para" value="TSTAL0001"/><br/>
+								<label>resp_tp</label><input type="text" name="resp_tp" class="para" value=""/><br/>
+								<label>pay_way</label><input type="text" name="pay_way" class="para" value=""/><br/>
+								<label>vilInDate</label><input type="text" name="vilInDate" class="para" value=""/><br/>
+								<label>rule1</label><input type="text" name="rule1" class="para" value="1210101"/><br/>
+								<label>rule2</label><input type="text" name="rule2" class="para" value="1210102"/><br/>
+								<label>rule3</label><input type="text" name="rule3" class="para" value="33"/><br/>
+								<label>rule4</label><input type="text" name="rule4" class="para" value="3020047"/><br/>
+								<select class="action">
+									<option>saveViolation</option>
+									<option>searchViolationByPerson</option>
+									<option>searchViolationByCar</option>
+									<option>searchCarViolation</option>
+									<option>searchPenaltyByNaturalPerson</option>
+									<option>searchPenaltyByNaturalPersonCount</option>
+									<option>searchPenaltyByLegalPerson</option>
+									<option>searchPenaltyByLegalPersonCount</option>
+									<option>searchSuspDriverLicence</option>
+									<option>searchSuspPlate</option>
+									<option>searchMarkByDriver</option>
+									<option>searchMarkByNaturalPerson</option>
+									<option>searchMarkByLegalPerson</option>
+								</select><br/>
+								<input type="button" value="PolViolationService" onclick="service(this)"/>
+								<input type="button" value="EmvViolationService" onclick="service(this)"/>
+							</form>
+						</td>
+						<td><div id="tabWs"><div class="easyui-tabs" style="width:1200px;height:400px" data-options="border:false"></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+	<script>
+	alert($('div[title$="jSql"] textarea').val());
+	</script>
+</html>

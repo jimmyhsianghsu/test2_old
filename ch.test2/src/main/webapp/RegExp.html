@@ -1,0 +1,154 @@
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" charset="utf-8"></script>
+<script>
+function s(){$('#t2').val('').val($('#t1').val().match(new RegExp($('#reg').val())));}
+</script>
+<input type="text" value="(?:\/\*\* *\n *\* *)(.+)(?= *\n *\*\/) *\n *" id="reg" size="50"/>
+<input type="button" value="s" onclick="s()"/><br/>
+<textarea id="t2" rows="10" cols="50"> *\/\*\* *\r?\n *\* *(.+) *\r?\n *\*\/\r?\n *private *.* (.+);$2 : $1</textarea><br/>
+<textarea id="t1" rows="100" cols="50">
+    /**
+     * 流水號
+     */
+    private String seq;
+    /**
+     * 車號
+     */
+    private String plateNo;
+    /**
+     * 違規日期
+     */
+    private Date vilDate;
+    /**
+     * 違規時間
+     */
+    private Date vilTime;
+    /**
+     * 違規地址
+     */
+    private String location;
+    /**
+     * 應到案日
+     */
+    private Date arrivedDate;
+    /**
+     * 違規單號
+     */
+    private String vilTicket;
+    /**
+     * 駕駛人證號
+     */
+    private String driverId;
+    /**
+     * 生日
+     */
+    private Date birthday;
+    /**
+     * 代管物件代碼
+     */
+    private String reservedNo;
+    /**
+     * 條款一
+     */
+    private int rule1;
+    /**
+     * 條款二
+     */
+    private int rule2;
+    /**
+     * 條款三
+     */
+    private int rule3;
+    /**
+     * 條款四
+     */
+    private int rule4;
+    /**
+     * 告發單位代碼檔
+     */
+    private String unitNo;
+    /**
+     * 舉發類型
+     */
+    private String vilType;
+    /**
+     * 車種別
+     */
+    private String carKind;
+    /**
+     * 車別
+     */
+    private String carType;
+    /**
+     * 異動別代碼
+     */
+    private String closeNo;
+    /**
+     * 櫃別
+     */
+    private String serviceType;
+    /**
+     * 車籍狀態
+     */
+    private String carStatus;
+    /**
+     * 駕籍狀態
+     */
+    private String driverStatus;
+    /**
+     * 鍵入員代碼
+     */
+    private String keyInNo;
+    /**
+     * 車主姓名
+     */
+    private String carHostName;
+    /**
+     * 駕駛人姓名
+     */
+    private String driverName;
+    /**
+     * 地址
+     */
+    private String address;
+    /**
+     * 顏色代碼
+     */
+    private int colorNo;
+    /**
+     * 警員
+     */
+    private String police;
+    /**
+     * 所站代碼
+     */
+    private String dmv;
+    /**
+     * 類別
+     */
+    private String type;
+    /**
+     * 郵區號
+     */
+    private int zipCode;
+    /**
+     * 入案日
+     */
+    private Date vilInDate;
+    /**
+     * 已繳金額
+     */
+    private int payment;
+    /**
+     * 應繳金額
+     */
+    private int penalty;
+    /**
+     * 異動日
+     */
+    private Date modifiedDate;
+    /**
+     * 異動人員代碼
+     */
+    private String modifiedNo;
+</textarea>
