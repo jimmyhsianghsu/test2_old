@@ -32,11 +32,13 @@ public class EmvViolationServiceTest {
 	}
 
 	if ("searchPenaltyByNaturalPerson".equals(action))
-	    list = port.searchPenaltyByNaturalPerson(req.getParameter("driverId"), gcBirthday,
-		    Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
+	    list = port.searchPenaltyByNaturalPerson(req.getParameter("driverId"), gcBirthday,Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
 	else if ("searchPenaltyByLegalPerson".equals(action))
-	    list = port.searchPenaltyByLegalPerson(req.getParameter("driverId"),
-		    Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
+	    list = port.searchPenaltyByLegalPerson(req.getParameter("driverId"),Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
+	else if ("searchPenaltyByNaturalPersonRestrict".equals(action))
+	    list = port.searchPenaltyByNaturalPersonRestrict(req.getParameter("driverId"), gcBirthday,Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
+	else if ("searchPenaltyByLegalPersonRestrict".equals(action))
+		list = port.searchPenaltyByLegalPersonRestrict(req.getParameter("driverId"),Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
 	else if ("searchSuspDriverLicence".equals(action))
 	    list = port.searchSuspDriverLicence(req.getParameter("driverId"), gcBirthday);
 	else if ("searchSuspPlate".equals(action))
@@ -44,25 +46,28 @@ public class EmvViolationServiceTest {
 	else if ("searchMarkByDriver".equals(action))
 	    list = port.searchMarkByDriver(req.getParameter("driverId"), gcBirthday);
 	else if ("searchMarkByNaturalPersonPage".equals(action))
-	    list = port.searchMarkByNaturalPersonPage(req.getParameter("driverId"), gcBirthday,
-		    Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
+	    list = port.searchMarkByNaturalPersonPage(req.getParameter("driverId"), gcBirthday,Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
 	else if ("searchMarkByLegalPersonPage".equals(action))
-	    list = port.searchMarkByLegalPersonPage(req.getParameter("driverId"),
-		    Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
+	    list = port.searchMarkByLegalPersonPage(req.getParameter("driverId"),Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
 	else if ("searchPaymentByNaturalPerson".equals(action))
-	    list = port.searchPaymentByNaturalPerson(req.getParameter("driverId"), null,
-		    Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
+	    list = port.searchPaymentByNaturalPerson(req.getParameter("driverId"), null,Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
 	else if ("searchPaymentByLegalPerson".equals(action))
-	    list = port.searchPaymentByLegalPerson(req.getParameter("driverId"),
-		    Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
+	    list = port.searchPaymentByLegalPerson(req.getParameter("driverId"),Integer.valueOf(req.getParameter("rowStart")), Integer.valueOf(req.getParameter("rowEnd")));
 	else if ("searchPenaltyByNaturalPersonCount".equals(action)) {
 	    EmvViolationOuterObject o = new EmvViolationOuterObject();
-	    o.setVilTicket(String.valueOf(port.searchPenaltyByNaturalPersonCount(req.getParameter("driverId"),
-		    gcBirthday)));
+	    o.setVilTicket(String.valueOf(port.searchPenaltyByNaturalPersonCount(req.getParameter("driverId"),gcBirthday)));
 	    list.add(o);
 	} else if ("searchPenaltyByLegalPersonCount".equals(action)) {
 	    EmvViolationOuterObject o = new EmvViolationOuterObject();
 	    o.setVilTicket(String.valueOf(port.searchPenaltyByLegalPersonCount(req.getParameter("driverId"))));
+	    list.add(o);
+	} else if ("searchPenaltyByNaturalPersonCountRestrict".equals(action)) {
+	    EmvViolationOuterObject o = new EmvViolationOuterObject();
+	    o.setVilTicket(String.valueOf(port.searchPenaltyByNaturalPersonCountRestrict(req.getParameter("driverId"),gcBirthday)));
+	    list.add(o);
+	} else if ("searchPenaltyByLegalPersonCountRestrict".equals(action)) {
+	    EmvViolationOuterObject o = new EmvViolationOuterObject();
+	    o.setVilTicket(String.valueOf(port.searchPenaltyByLegalPersonCountRestrict(req.getParameter("driverId"))));
 	    list.add(o);
 	} else if ("searchMarkByNaturalPersonCount".equals(action)) {
 	    EmvViolationOuterObject o = new EmvViolationOuterObject();
@@ -74,8 +79,7 @@ public class EmvViolationServiceTest {
 	    list.add(o);
 	} else if ("searchPaymentByNaturalPersonCount".equals(action)) {
 	    EmvViolationOuterObject o = new EmvViolationOuterObject();
-	    o.setVilTicket(String.valueOf(port.searchPaymentByNaturalPersonCount(req.getParameter("driverId"),
-		    gcBirthday)));
+	    o.setVilTicket(String.valueOf(port.searchPaymentByNaturalPersonCount(req.getParameter("driverId"),gcBirthday)));
 	    list.add(o);
 	} else if ("searchPaymentByLegalPersonCount".equals(action)) {
 	    EmvViolationOuterObject o = new EmvViolationOuterObject();
