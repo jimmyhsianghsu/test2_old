@@ -64,7 +64,7 @@ public class ServiceTest extends HttpServlet {
 	    }
 	}
 	res.getWriter().println(jobj.toString());
-	System.out.println(testCoreBatchService());
+	//System.out.println(testCoreBatchService());
     }
 
     private void getResList(JSONObject jobj, List list) throws JSONException, IllegalArgumentException,

@@ -9,10 +9,10 @@
  */
 package test;
 
+import java.util.Map;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author Carbo
@@ -242,6 +242,425 @@ public class EmvViolationOuterObject implements Serializable {
      * 入案日
      */
     private Date vilInDate;
+    /**
+     * 違規類型
+     */
+    private String vilKind;
+    /**
+     * 車駕別
+     */
+    private String vehKind;
+    /**
+     * 舉發單位代碼
+     */
+    private String accuseNo;
+    /**
+     * 櫃別
+     */
+    private String countNo;
+    /**
+     * 入案員
+     */
+    private String createUid;
+    /**
+     * 入案所站
+     */
+    private String createDmv;
+    /**
+     * 案件管轄所站
+     */
+    private String adjNo;
+    /**
+     * 最新陳訴狀態
+     */
+    private String remedyState;
+    /**
+     * 最新陳訴日期
+     */
+    private Date remedyDate;
+    /**
+     * 最新處理情形
+     */
+    private String handleState;
+    /**
+     * 最新處理日期
+     */
+    private Date handleDate;
+    /**
+     * 文號
+     */
+    private String remedyDoc;
+    /**
+     * 陳訴明細<List>
+     */
+    private List<String> remedyDetail;
+    /**
+     * 郵遞區號
+     */
+    private String permZip;
+    /**
+     * 戶政地址
+     */
+    private String permAddress;
+
+    /**
+     * 送達狀態
+     */
+    private String receiveState;
+    /**
+     * 送達日
+     */
+    private Date receiveDate;
+    /**
+     * 裁決員
+     */
+    private String adjudicator;
+    /**
+     * 裁決日
+     */
+    private Date adjDate;
+    /**
+     * 裁決成功失敗訊息
+     */
+    private String caseFlag;
+    /**
+     * 單據類別
+     */
+    private String vilType;
+    /**
+     * 違規地點代碼
+     */
+    private String vilAddrNo;
+
+    /**
+     * @return the vilAddrNo
+     */
+    public String getVilAddrNo() {
+	return vilAddrNo;
+    }
+
+    /**
+     * @param vilAddrNo
+     *            the vilAddrNo to set
+     */
+    public void setVilAddrNo(String vilAddrNo) {
+	this.vilAddrNo = vilAddrNo;
+    }
+
+    /**
+     * @return the accuseNo
+     */
+    public String getAccuseNo() {
+	return accuseNo;
+    }
+
+    /**
+     * @param accuseNo
+     *            the accuseNo to set
+     */
+    public void setAccuseNo(String accuseNo) {
+	this.accuseNo = accuseNo;
+    }
+
+    /**
+     * @return the countNo
+     */
+    public String getCountNo() {
+	return countNo;
+    }
+
+    /**
+     * @param countNo
+     *            the countNo to set
+     */
+    public void setCountNo(String countNo) {
+	this.countNo = countNo;
+    }
+
+    /**
+     * @return the createUid
+     */
+    public String getCreateUid() {
+	return createUid;
+    }
+
+    /**
+     * @param createUid
+     *            the createUid to set
+     */
+    public void setCreateUid(String createUid) {
+	this.createUid = createUid;
+    }
+
+    /**
+     * @return the createDmv
+     */
+    public String getCreateDmv() {
+	return createDmv;
+    }
+
+    /**
+     * @param createDmv
+     *            the createDmv to set
+     */
+    public void setCreateDmv(String createDmv) {
+	this.createDmv = createDmv;
+    }
+
+    /**
+     * @return the adjNo
+     */
+    public String getAdjNo() {
+	return adjNo;
+    }
+
+    /**
+     * @param adjNo
+     *            the adjNo to set
+     */
+    public void setAdjNo(String adjNo) {
+	this.adjNo = adjNo;
+    }
+
+    /**
+     * @return the remedyState
+     */
+    public String getRemedyState() {
+	return remedyState;
+    }
+
+    /**
+     * @param remedyState
+     *            the remedyState to set
+     */
+    public void setRemedyState(String remedyState) {
+	this.remedyState = remedyState;
+    }
+
+    /**
+     * @return the remedyDate
+     */
+    public Date getRemedyDate() {
+	return remedyDate;
+    }
+
+    /**
+     * @param remedyDate
+     *            the remedyDate to set
+     */
+    public void setRemedyDate(Date remedyDate) {
+	this.remedyDate = remedyDate;
+    }
+
+    /**
+     * @return the handleState
+     */
+    public String getHandleState() {
+	return handleState;
+    }
+
+    /**
+     * @param handleState
+     *            the handleState to set
+     */
+    public void setHandleState(String handleState) {
+	this.handleState = handleState;
+    }
+
+    /**
+     * @return the handleDate
+     */
+    public Date getHandleDate() {
+	return handleDate;
+    }
+
+    /**
+     * @param handleDate
+     *            the handleDate to set
+     */
+    public void setHandleDate(Date handleDate) {
+	this.handleDate = handleDate;
+    }
+
+    /**
+     * @return the remedyDoc
+     */
+    public String getRemedyDoc() {
+	return remedyDoc;
+    }
+
+    /**
+     * @param remedyDoc
+     *            the remedyDoc to set
+     */
+    public void setRemedyDoc(String remedyDoc) {
+	this.remedyDoc = remedyDoc;
+    }
+
+    /**
+     * @return the remedyDetail
+     */
+    public List<String> getRemedyDetail() {
+	return remedyDetail;
+    }
+
+    /**
+     * @param remedyDetail
+     *            the remedyDetail to set
+     */
+    public void setRemedyDetail(List<String> remedyDetail) {
+	this.remedyDetail = remedyDetail;
+    }
+
+    /**
+     * @return the permZip
+     */
+    public String getPermZip() {
+	return permZip;
+    }
+
+    /**
+     * @param permZip
+     *            the permZip to set
+     */
+    public void setPermZip(String permZip) {
+	this.permZip = permZip;
+    }
+
+    /**
+     * @return the permAddress
+     */
+    public String getPermAddress() {
+	return permAddress;
+    }
+
+    /**
+     * @param permAddress
+     *            the permAddress to set
+     */
+    public void setPermAddress(String permAddress) {
+	this.permAddress = permAddress;
+    }
+
+    /**
+     * @return the receiveState
+     */
+    public String getReceiveState() {
+	return receiveState;
+    }
+
+    /**
+     * @param receiveState
+     *            the receiveState to set
+     */
+    public void setReceiveState(String receiveState) {
+	this.receiveState = receiveState;
+    }
+
+    /**
+     * @return the receiveDate
+     */
+    public Date getReceiveDate() {
+	return receiveDate;
+    }
+
+    /**
+     * @param receiveDate
+     *            the receiveDate to set
+     */
+    public void setReceiveDate(Date receiveDate) {
+	this.receiveDate = receiveDate;
+    }
+
+    /**
+     * @return the adjudicator
+     */
+    public String getAdjudicator() {
+	return adjudicator;
+    }
+
+    /**
+     * @param adjudicator
+     *            the adjudicator to set
+     */
+    public void setAdjudicator(String adjudicator) {
+	this.adjudicator = adjudicator;
+    }
+
+    /**
+     * @return the adjDate
+     */
+    public Date getAdjDate() {
+	return adjDate;
+    }
+
+    /**
+     * @param adjDate
+     *            the adjDate to set
+     */
+    public void setAdjDate(Date adjDate) {
+	this.adjDate = adjDate;
+    }
+
+    /**
+     * @return the caseFlag
+     */
+    public String getCaseFlag() {
+	return caseFlag;
+    }
+
+    /**
+     * @param caseFlag
+     *            the caseFlag to set
+     */
+    public void setCaseFlag(String caseFlag) {
+	this.caseFlag = caseFlag;
+    }
+
+    /**
+     * @return the vilType
+     */
+    public String getVilType() {
+	return vilType;
+    }
+
+    /**
+     * @param vilType
+     *            the vilType to set
+     */
+    public void setVilType(String vilType) {
+	this.vilType = vilType;
+    }
+
+    /**
+     * @return the vilKind
+     */
+    public String getVilKind() {
+	return vilKind;
+    }
+
+    /**
+     * @param vilKind
+     *            the vilKind to set
+     */
+    public void setVilKind(String vilKind) {
+	this.vilKind = vilKind;
+    }
+
+    /**
+     * @return the vehKind
+     */
+    public String getVehKind() {
+	return vehKind;
+    }
+
+    /**
+     * @param vehKind
+     *            the vehKind to set
+     */
+    public void setVehKind(String vehKind) {
+	this.vehKind = vehKind;
+    }
 
     /**
      * @return the vilInDate
