@@ -64,7 +64,7 @@ public class ServiceTest extends HttpServlet {
 	    }
 	}
 	res.getWriter().println(jobj.toString());
-	//System.out.println(testCoreBatchService());
+	System.out.println(testCoreBatchService());
     }
 
     private void getResList(JSONObject jobj, List list) throws JSONException, IllegalArgumentException,
@@ -95,11 +95,11 @@ public class ServiceTest extends HttpServlet {
     private boolean testCoreBatchService() {
 	ServiceMapEntryArray ar = new ServiceMapEntryArray();
 	ServiceMapEntry en = new ServiceMapEntry();
-	en.setKey("mei.file.list");
-	en.setValue("file:/opt/m3fs/static/mei/POL/download/POL005-1020924-0000001/AA10206190.0.E");
+	en.setKey("vilInDate");
+	en.setValue("2013/10/5");
 	List<ServiceMapEntry> li = new ArrayList<ServiceMapEntry>();
 	li.add(en);
 	ar.item = li;
-	return new CoreBatchServiceClient().getCoreBatchServiceImplPort().startJob("jobPOL005", "", ar);
+	return new CoreBatchServiceClient().getCoreBatchServiceImplPort().startJob("jobEMG006", "", ar);
     }
 }
