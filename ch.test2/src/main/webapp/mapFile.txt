@@ -1,3 +1,13 @@
+infocomp_004.4
+D:\0.road\2.comp_infocomp(004)\compare(1171138).html
+C:\Users\Carbo\git\informix\informix\src\main\resources\META-INF\page\compare(10280448).html
+D:\0.road\2.comp_infocomp(004)\_tab_informix.(1150226).html
+C:\Users\Carbo\git\informix\informix\src\main\resources\META-INF\page\_tab_informix.1028(0415).html
+D:\0.road\2.comp_infocomp(004)\Compare(1171131).java
+C:\Users\Carbo\git\informix\informix\src\main\java\compare\Compare.java
+D:\0.road\2.comp_infocomp(004)\RegTest(1171104).java
+C:\Users\Carbo\git\informix\informix\src\main\java\test\RegTest.java
+
 infocomp_009.13
 D:\0.road\2.comp_informix_009(13)\009._tab_informix.1028(0415).html
 D:\0.road\2.comp_infocomp(17)\0._tab_informix.1028(0415).html
