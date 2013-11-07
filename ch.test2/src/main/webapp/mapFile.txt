@@ -292,6 +292,20 @@ D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-server\src\test\java\gov\mvdis\m3\vil
 D:\0.road\2.comp_emv\test\test.xml
 D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-server\src\test\resources\gov\mvdis\m3\vil\pub\data\dao\test.xml
 
+emg006.6
+D:\0.road\2.comp_emg006\vil-batch-jobEMG006.xml
+D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-batch\src\main\resources\META-INF\spring\vil-batch-jobEMG006.xml
+D:\0.road\2.comp_emg006\EnoticeRow.java
+D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-batch\src\main\java\gov\mvdis\m3\vil\batch\job\emg006\EnoticeRow.java
+D:\0.road\2.comp_emg006\EnoticeRowMapper.java
+D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-batch\src\main\java\gov\mvdis\m3\vil\batch\job\emg006\EnoticeRowMapper.java
+D:\0.road\2.comp_emg006\EnoticeStatementSetter.java
+D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-batch\src\main\java\gov\mvdis\m3\vil\batch\job\emg006\EnoticeStatementSetter.java
+D:\0.road\2.comp_emg006\EMG006ItemProcessor.java
+D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-batch\src\main\java\gov\mvdis\m3\vil\batch\job\emg006\EMG006ItemProcessor.java
+D:\0.road\2.comp_emg006\EMG006ItemWriter.java
+D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-batch\src\main\java\gov\mvdis\m3\vil\batch\job\emg006\EMG006ItemWriter.java
+
 other.6
 C:\Users\Carbo\Desktop\vil_test\new  1.txt
 C:\Users\Carbo\Desktop\vil_test\new  2.txt

@@ -96,7 +96,7 @@ public class ServiceTest extends HttpServlet {
 	ServiceMapEntryArray ar = new ServiceMapEntryArray();
 	ServiceMapEntry en = new ServiceMapEntry();
 	en.setKey("vilInDate");
-	en.setValue("2013/10/8");
+	en.setValue(new java.text.SimpleDateFormat("yyyy/MM/dd HH:mm:ss").format(new java.util.Date()));
 	List<ServiceMapEntry> li = new ArrayList<ServiceMapEntry>();
 	li.add(en);
 	ar.item = li;
