@@ -306,6 +306,12 @@ D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-batch\src\main\java\gov\mvdis\m3\vil\
 D:\0.road\2.comp_emg006\EMG006ItemWriter.java
 D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-batch\src\main\java\gov\mvdis\m3\vil\batch\job\emg006\EMG006ItemWriter.java
 
+adj.2
+D:\0.road\2.comp_adj\AdjViolationService.java
+D:\M3SDK\Eclipse\m3Workspace\m3-ws\m3-ws-api\src\main\java\gov\mvdis\m3\vil\service\pub\AdjViolationService.java
+D:\0.road\2.comp_adj\AdjViolationServiceImpl.java
+D:\M3SDK\Eclipse\m3Workspace\m3-vil\m3-vil-server\src\main\java\gov\mvdis\m3\vil\pub\service\impl\AdjViolationServiceImpl.java
+
 other.6
 C:\Users\Carbo\Desktop\vil_test\new  1.txt
 C:\Users\Carbo\Desktop\vil_test\new  2.txt
