@@ -100,6 +100,6 @@ public class ServiceTest extends HttpServlet {
 	List<ServiceMapEntry> li = new ArrayList<ServiceMapEntry>();
 	li.add(en);
 	ar.item = li;
-	return new CoreBatchServiceClient().getCoreBatchServiceImplPort().startJob("jobEMG006", "", ar);
+	try{return new CoreBatchServiceClient().getCoreBatchServiceImplPort().startJob("jobEMG006", "", ar);}catch(Exception e){e.printStackTrace();return false;}
     }
 }

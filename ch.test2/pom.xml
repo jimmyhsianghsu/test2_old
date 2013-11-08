@@ -14,8 +14,8 @@
 		<emv.ci>http://10.0.3.11:20003/m3-service/vil/vil001/s004?wsdl</emv.ci>
 		<pol.app>http://10.0.3.12:20003/m3-service/vil/vil001/s003?wsdl</pol.app>
 		<emv.app>http://10.0.3.12:20003/m3-service/vil/vil001/s004?wsdl</emv.app>
-		<pol.prd>http://10.0.1.43:8000/m3-service/vil/vil001/s003?wsdl</pol.prd>
-		<emv.prd>http://10.0.1.43:8000/m3-service/vil/vil001/s004?wsdl</emv.prd>
+		<pol.prd>http://10.0.1.83:8000/m3-service/vil/vil001/s003?wsdl</pol.prd>
+		<emv.prd>http://10.0.1.83:8000/m3-service/vil/vil001/s004?wsdl</emv.prd>
 		<batch.vil>http://192.168.242.196:8083/m3-batch/service/bat/sys001/s001?wsdl</batch.vil>
 		<batch.app>http://10.0.3.12:30003/m3-batch/service/bat/sys001/s001?wsdl</batch.app>
 	</properties>
@@ -46,7 +46,7 @@
 <!-- 			                <sourceRoot>${project.build.directory}/src/main/java</sourceRoot> -->
 <!-- 			                <wsdlOptions> -->
 <!-- 			                    <wsdlOption> -->
-<!-- 			                        <wsdl>${emv.vil}</wsdl> -->
+<!-- 			                        <wsdl>${emv.prd}</wsdl> -->
 <!-- 			                        <wsdl>${pol.vil}</wsdl> -->
 <!-- 									<wsdl>${batch.app}</wsdl> -->
 <!-- 			                    </wsdlOption> -->
