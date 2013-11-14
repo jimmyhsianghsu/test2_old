@@ -32,14 +32,17 @@ public class ServiceTest extends HttpServlet {
 	ResourceBundle rb = ResourceBundle.getBundle("/META-INF/bundle/wsdl");
 	URL urlPol = null;
 	URL urlEmv = null;
+	URL urlBat = null;
 	try {
 	    urlPol = new URL(rb.getString("pol." + url));
 	    urlEmv = new URL(rb.getString("emv." + url));
+	    urlBat = new URL(rb.getString("bat." + url));
 	} catch (MalformedURLException e) {
 	    e.printStackTrace();
 	}
 	PolViolationService.WSDL_LOCATION = urlPol;
 	EmvViolationService.WSDL_LOCATION = urlEmv;
+	CoreBatchServiceClient.WSDL_LOCATION = urlBat;
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
