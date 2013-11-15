@@ -85,6 +85,15 @@ public class EmvViolationServiceTest {
 	    EmvViolationOuterObject o = new EmvViolationOuterObject();
 	    o.setVilTicket(String.valueOf(port.searchPaymentByLegalPersonCount(req.getParameter("driverId"))));
 	    list.add(o);
+	}else if("updateViolation".equals(action)){
+		EmvViolationOuterObject o = new EmvViolationOuterObject();
+		o.setVilTicket(req.getParameter("ticket"));
+		o.setPlateNo(req.getParameter("plateNo"));
+		o.setVehKind(req.getParameter("carKind"));
+		o.setPenalty(Integer.valueOf(req.getParameter("rule1")));
+		o.setPayment(Integer.valueOf(req.getParameter("rule2")));
+		o.setDriverId(String.valueOf(port.updateViolation(o)));
+		list.add(o);
 	}
 	return list;
     }
